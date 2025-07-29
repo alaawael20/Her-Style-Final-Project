@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+.top-bar {
+  background-color: #e60000;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo {
+  width: 100px;
+}
+
+.search-form {
+  width: 690px;
+}
+
+.search-form .form-control {
+  padding-right: 50px;
+  border: 1px solid rgba(86, 68, 149, 0.3);
+  color: #564495;
+  background-color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.search-form .form-control:focus {
+  border-color: rgba(86, 68, 149, 0.3);
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.search-form .form-control::placeholder {
+  color: #564495;
+  opacity: 0.8;
+}
+
+.search-form .form-control:hover {
+  border-color: #564495;
+  transition: border-color 0.3s ease;
+}
+
+.search-form .search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #564495;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.search-form .form-control::-webkit-search-decoration,
+.search-form .form-control::-webkit-search-cancel-button,
+.search-form .form-control::-webkit-search-results-button,
+.search-form .form-control::-webkit-search-results-decoration {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .search-form {
+    width: 100%;
+  }
+
+  .navbar .container {
+    text-align: center;
+  }
+
+  .logo,
+  .cartLogo {
+    width: 50px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0;
+  }
+}
