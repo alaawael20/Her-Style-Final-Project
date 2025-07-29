@@ -145,5 +145,164 @@ body {
 
 .carousel-item img {
   height: 415px;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.products-section {
+  padding: 40px 20px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.refund-section {
+  background-color: #4b3b94;
+  padding: 20px 0;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.refund-btn {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  line-height: 1.6;
+  transition: 0.3s ease;
+}
+
+.refund-btn:hover {
+  background-color: #cc0000;
+}
+
+.leaf-img {
+  width: 80px;
+  max-width: 100%;
+}
+
+.product-img {
+  width: 200px;
+  max-width: 100%;
+}
+
+.spon-img {
+  width: 100px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .refund-section {
+    display: none;
+  }
+}
+
+.main-heading {
+  font-size: 32px;
+  color: #4b3b94;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 26px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 270px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #4b3b94;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #f4b400;
+  margin-right: 4px;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  color: #333;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount {
+  color: red;
+  font-size: 13px;
+}
+
+.add-to-cart {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  color: #4b3b94;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.add-to-cart i {
+  margin-left: 6px;
+}
+
+.add-to-cart:hover {
+  background-color: #4b3b94;
+  color: white;
 }
