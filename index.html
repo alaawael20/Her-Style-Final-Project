@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/images/logo.png" type="image/png">
     <script src="https://kit.fontawesome.com/5a1ddf1742.js" crossorigin="anonymous"></script>
 </head>
@@ -23,7 +24,7 @@
     </div>
     <!-- End Top Bar   -->
 
-    <!-- Start Nav Bar   -->
+    <!-- Start Search Bar   -->
     <nav class="navbar navbar-expand-lg">
         <div
             class="container d-flex flex-lg-row align-items-center justify-content-between flex-column flex-lg-row gap-3">
@@ -53,9 +54,34 @@
 
         </div>
     </nav>
-    <!-- End Nav Bar   -->
+    <!-- End Search Bar   -->
 
+    <!-- Start Nav Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
 
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
+                    <a class="btn btn-outline-light login-btn order-3 order-lg-3" href="#">
+                        <i class="fa-solid fa-user ms-1"></i>تسجيل الدخول
+                    </a>
+
+                    <ul class="navbar-nav mx-auto order-1 order-lg-2 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">الصفحة الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">جميع المنتجات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">سياسة الاستخدام</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">من نحن</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Nav Bar -->
 
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .top-bar {
@@ -84,4 +84,37 @@ body {
   .navbar-brand {
     margin-bottom: 0;
   }
+}
+
+.custom-navbar {
+  background-color: #4b3b94;
+  padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+.login-btn i {
+  margin-left: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+.login-btn {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #fff;
+  color: #4b3b94;
 }
