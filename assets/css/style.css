@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --mainColor: #4b3b94;
+}
+
 body {
   font-family: "Cairo", sans-serif;
 }
@@ -87,7 +91,7 @@ body {
 }
 
 .custom-navbar {
-  background-color: #4b3b94;
+  background-color: var(--mainColor);
   padding: 10px 0;
 }
 
@@ -116,7 +120,7 @@ body {
 
 .login-btn:hover {
   background-color: #fff;
-  color: #4b3b94;
+  color: var(--mainColor);
 }
 
 .carousel {
@@ -140,7 +144,7 @@ body {
 }
 
 .carousel-indicators .active {
-  background-color: #4b3b94 !important;
+  background-color: var(--mainColor) !important;
 }
 
 .carousel-item img {
@@ -157,7 +161,7 @@ body {
 }
 
 .refund-section {
-  background-color: #4b3b94;
+  background-color: var(--mainColor);
   padding: 20px 0;
   height: 250px;
   position: relative;
@@ -205,7 +209,7 @@ body {
 
 .main-heading {
   font-size: 32px;
-  color: #4b3b94;
+  color: var(--mainColor);
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -232,7 +236,7 @@ body {
 
 .product-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-color: #4b3b94;
+  border-color: var(--mainColor);
 }
 
 .product-img {
@@ -290,7 +294,7 @@ body {
 .add-to-cart {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
-  color: #4b3b94;
+  color: var(--mainColor);
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -303,6 +307,89 @@ body {
 }
 
 .add-to-cart:hover {
-  background-color: #4b3b94;
+  background-color: var(--mainColor);
   color: white;
+}
+
+.all-products {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  color: var(--mainColor);
+  padding: 10px 100px;
+  margin-top: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.all-products:hover {
+  background-color: var(--mainColor);
+  color: white;
+}
+
+.banner {
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/shopping.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.banner .btn-main {
+  background-color: #4b3c88;
+  color: white;
+}
+.banner .btn-main:hover {
+  background-color: #362a66;
+}
+
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  position: relative;
+}
+.ticker {
+  display: inline-block;
+  animation: ticker-scroll 30s linear infinite;
+}
+.testimonial {
+  display: inline-block;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  min-width: 250px;
+  text-align: center;
+}
+.testimonial img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.testimonial .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+.testimonial .position {
+  font-size: 12px;
+  color: #666;
+}
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.section-title {
+  color: #4b3c88;
 }
