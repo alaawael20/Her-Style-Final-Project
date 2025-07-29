@@ -118,3 +118,27 @@ body {
   background-color: #fff;
   color: #4b3b94;
 }
+
+.carousel {
+  margin-block: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #ccc !important;
+  margin: 0 6px;
+  border: none !important;
+  opacity: 1 !important;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #4b3b94 !important;
+}
