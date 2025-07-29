@@ -142,3 +142,8 @@ body {
 .carousel-indicators .active {
   background-color: #4b3b94 !important;
 }
+
+.carousel-item img {
+  height: 415px;
+  border-radius: 15px;
+}
