@@ -393,3 +393,63 @@ body {
 .section-title {
   color: #4b3c88;
 }
+
+.footer {
+  background-color: var(--mainColor);
+  padding: 50px 0 20px;
+  color: #fff;
+}
+
+.footer .pLogo {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer .navs a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer .navs a:hover {
+  text-decoration: underline;
+}
+
+.footer .line {
+  border-color: #fff;
+}
+
+.footer .copy {
+  text-align: center;
+  font-size: 15px;
+}
+
+.footer .copy .copyRight {
+  margin-right: 10px;
+}
+
+.footer .copy .alaa {
+  margin-left: 10px;
+  color: #f7981d;
+}
+
+.footer .pays {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer i {
+  font-size: 26px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer i:hover {
+  transform: scale(1.2);
+  color: #f7981d;
+}
+
+.footer .pVisaAdd {
+  font-size: 15px;
+  margin: 0;
+}
