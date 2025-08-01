@@ -2,13 +2,304 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Her Style - Products</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Her Style - كل المنتجات</title>
+
+    <!-- SEO -->
+    <meta name="description" content="اكتشف منتجات Her Style للعناية بالشعر بجودة عالية وعروض تصل إلى 40٪." />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./assets/images/logo.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/5a1ddf1742.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
+    <!-- Start Top Bar -->
+    <div class="top-bar text-center py-2 fw-bold">
+        تخفيضات موسمية تصل إلى 40% حتى 30 سبتمبر
+    </div>
 
+    <!-- Start Header/Nav -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+
+            <!-- Logo + Cart (Small screens) -->
+            <div class="logo-cart-wrapper d-flex d-lg-none justify-content-between w-100">
+                <a class="navbar-brand" href="/"><img src="./assets/images/logo.png" alt="الشعار" class="logo" /></a>
+                <a class="navbar-brand" href="#"><img src="./assets/images/shopping-bag_outline.png" alt="السلة"
+                        class="cartLogo" /></a>
+            </div>
+
+            <!-- Logo (Large screens) -->
+            <a class="navbar-brand d-none d-lg-block" href="/"><img src="./assets/images/logo.png" alt="الشعار"
+                    class="logo" /></a>
+
+            <!-- Search -->
+            <form class="search-form position-relative d-flex align-items-center" role="search">
+                <input class="form-control ps-5" type="search" placeholder="ابحث هنا ..." aria-label="Search" />
+                <i class="fa-solid fa-magnifying-glass search-icon position-absolute"></i>
+            </form>
+
+            <!-- Cart (Large screens) -->
+            <a class="navbar-brand d-none d-lg-block" href="#"><img src="./assets/images/shopping-bag_outline.png"
+                    alt="السلة" class="cartLogo" /></a>
+        </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
+                    <a class="btn btn-outline-light login-btn order-3" href="#"><i
+                            class="fa-solid fa-user ms-1"></i>تسجيل الدخول</a>
+                    <ul class="navbar-nav mx-auto order-1 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">الصفحة الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products.html">جميع المنتجات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/terms.html">سياسة الاستخدام</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/WhoWeAre.html">من نحن</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container my-4">
+        <div class="row">
+
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3 col-md-5 mb-4">
+                <div class="filters">
+
+                    <h5 class="filter-title text-end mb-3">
+                        <i class="fa fa-filter ms-2"></i> الفلترة
+                    </h5>
+
+                    <!-- التقييم -->
+                    <div class="filter-group">
+                        <button class="filter-toggle" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#ratingCollapse">
+                            <i class="fa fa-chevron-down ms-2"></i> التقييم
+                        </button>
+                        <div class="collapse show" id="ratingCollapse">
+                            <!-- تقييمات -->
+                            <!-- كرر حسب الحاجة -->
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="rating"
+                                    id="rate45" checked /><label class="form-check-label" for="rate45">أكثر من 4.5
+                                    ★★★★★</label></div>
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="rating"
+                                    id="rate40" /><label class="form-check-label" for="rate40">أكثر من 4.0 ★★★★☆</label>
+                            </div>
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="rating"
+                                    id="rate35" /><label class="form-check-label" for="rate35">أكثر من 3.5 ★★★☆☆</label>
+                            </div>
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="rating"
+                                    id="rate30" /><label class="form-check-label" for="rate30">أكثر من 3.0 ★★☆☆☆</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- التصنيفات -->
+                    <div class="filter-group">
+                        <button class="filter-toggle" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#categoryCollapse">
+                            <i class="fa fa-chevron-down ms-2"></i> التصنيفات
+                        </button>
+                        <div class="collapse show" id="categoryCollapse">
+                            <div class="form-check text-end"><input class="form-check-input" type="checkbox" id="cat1"
+                                    checked /><label class="form-check-label" for="cat1">بكجات</label></div>
+                            <div class="form-check text-end"><input class="form-check-input" type="checkbox"
+                                    id="cat2" /><label class="form-check-label" for="cat2">منتج</label></div>
+                        </div>
+                    </div>
+
+                    <!-- السعر -->
+                    <div class="filter-group">
+                        <button class="filter-toggle" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#priceCollapse">
+                            <i class="fa fa-chevron-down ms-2"></i> السعر
+                        </button>
+                        <div class="collapse show" id="priceCollapse">
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="price"
+                                    id="price1" checked /><label class="form-check-label" for="price1">من 50 إلى 60
+                                    رس</label></div>
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="price"
+                                    id="price2" /><label class="form-check-label" for="price2">من 70 إلى 80 رس</label>
+                            </div>
+                            <div class="form-check text-end"><input class="form-check-input" type="radio" name="price"
+                                    id="price3" /><label class="form-check-label" for="price3">من 80 إلى 90 رس</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products -->
+            <div class="col-lg-9 col-md-7">
+                <section class="products-section text-center">
+                    <div class="d-flex justify-content-start gap-2 mb-3">
+                        <button class="btn btn-light newest">الأحدث</button>
+                        <button class="btn btn-light more">الأكثر طلباً</button>
+                    </div>
+
+                    <div class="container d-flex flex-wrap justify-content-center gap-3">
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <div class="product-details">
+                                <h5 class="product-title">مجموعة العناية اليومية</h5>
+                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="price">
+                                    <span class="current-price">102.00 ر.س</span>
+                                    <span class="old-price">132.00 ر.س</span>
+                                    <span class="discount">وفر %30</span>
+                                </div>
+                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/products.html" class="btn btn-outline-dark mt-4 all-products">عرض جميع المنتجات</a>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row gy-5 justify-content-between">
+                <!-- Logo -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="./assets/images/whiteLogo.png" alt="شعار أبيض" class="img-fluid mb-3" />
+                    <p class="pLogo">في متجرنا المميز الذي ينتسب لجمال المرأة ونعومة شعرها، نقدم منتجات عالمية وصحية
+                        لشعرك.</p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="navs d-flex flex-column gap-2">
+                        <a href="/" class="text-white">الرئيسية</a>
+                        <a href="/products.html" class="text-white">جميع المنتجات</a>
+                        <a href="/terms.html" class="text-white">سياسة الاستخدام</a>
+                        <a href="/WhoWeAre.html" class="text-white">من نحن</a>
+                        <a href="#" class="text-white">تسجيل الدخول</a>
+                    </div>
+                </div>
+
+                <!-- Payments & Social -->
+                <div class="col-lg-4">
+                    <p>طرق الدفع:</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <img src="./assets/images/visa.png" alt="Visa" width="50" />
+                        <img src="./assets/images/pay.png" alt="Pay" width="50" />
+                        <img src="./assets/images/mada.png" alt="Mada" width="50" />
+                    </div>
+
+                    <p class="mt-4">تابعنا على:</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#"><i class="fa-brands fa-facebook text-white fs-5"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter text-white fs-5"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-snapchat text-white fs-5"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram text-white fs-5"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok text-white fs-5"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-white fs-5"></i></a>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4 align-items-center">
+                        <img src="./assets/images/visaAdd.png" alt="Visa Add" width="40" />
+                        <p class="pVisaAdd">الضريبة المضافة: 12345678</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-5 border-light" />
+            <p class="text-center mt-3">© 2025 July, Inc. All rights reserved. <span class="alaa">Eng. Alaa
+                    Al-Faqawi</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
