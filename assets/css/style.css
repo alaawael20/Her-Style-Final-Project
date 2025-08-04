@@ -935,3 +935,36 @@ input[type="text"]:not(:placeholder-shown) {
 #backToTopBtn:hover {
   background-color: #3a2d7d;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.floating-label {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.edit-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mainColor);
+  cursor: pointer;
+}
+
+.form-group .inputForm {
+  padding-left: 50px;
+  text-align: end;
+}

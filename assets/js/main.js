@@ -226,3 +226,9 @@ backToTopBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+function enableEdit(inputId) {
+  const input = document.getElementById(inputId);
+  input.removeAttribute("disabled");
+  input.focus();
+}

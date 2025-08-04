@@ -1,14 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Her Style - تعديل البيانات</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/5a1ddf1742.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-light">
+    <!-- Start Top Bar -->
+    <div class="top-bar position-relative text-center">
+        <span class="topbar-text">تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر</span>
+        <button class="close-topbar" title="إغلاق الشريط">&times;</button>
+    </div>
+    <!-- End Top Bar -->
 
+    <!-- Start Edit Page -->
+    <div class="container py-5">
+        <div class="card mx-auto p-4" style="max-width: 600px;">
+            <div class="text-center mb-4">
+                <img src="./assets/images/alaa.jpg" class="rounded-circle mb-2" width="100" height="100" alt="user">
+                <h5 class="mb-0">مرحباً بك، علاء الفقعاوي</h5>
+                <small class="text-muted">الرئيسية / تعديل المعلومات</small>
+            </div>
+
+            <!-- الاسم -->
+            <div class="form-group position-relative mb-3">
+                <input type="text" class="inputForm form-control input-with-icon" id="nameInput" value="علاء الفقعاوي"
+                    disabled>
+                <label for="nameInput" class="floating-label">الاسم</label>
+                <i class="fa fa-pen edit-icon" onclick="enableEdit('nameInput')"></i>
+            </div>
+
+            <!-- البريد -->
+            <div class="form-group position-relative mb-3">
+                <input type="email" class="inputForm form-control input-with-icon" id="emailInput"
+                    value="alaaelfaqawi2001@gmail.com" disabled>
+                <label for="emailInput" class="floating-label">البريد الإلكتروني</label>
+                <i class="fa fa-pen edit-icon" onclick="enableEdit('emailInput')"></i>
+            </div>
+
+            <!-- كلمة المرور -->
+            <div class="form-group position-relative mb-3">
+                <input type="password" class="inputForm form-control input-with-icon" id="passwordInput"
+                    value="123456789" disabled>
+                <label for="passwordInput" class="floating-label">كلمة المرور</label>
+                <i class="fa fa-pen edit-icon" onclick="enableEdit('passwordInput')"></i>
+            </div>
+
+            <button class="btn w-100 add-to-cart" style="color: #fff; background-color: var(--mainColor);">
+                حفظ التعديلات
+            </button>
+        </div>
+    </div>
+    <!-- End Edit Page -->
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
