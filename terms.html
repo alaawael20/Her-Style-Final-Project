@@ -17,11 +17,12 @@
 </head>
 
 <body>
-    <!-- Start Top Bar   -->
-    <div class="top-bar">
-        تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر
+    <!-- Start Top Bar -->
+    <div class="top-bar position-relative text-center">
+        <span class="topbar-text">تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر</span>
+        <button class="close-topbar" title="إغلاق الشريط">&times;</button>
     </div>
-    <!-- End Top Bar   -->
+    <!-- End Top Bar -->
 
     <!-- Start Search Bar   -->
     <nav class="navbar navbar-expand-lg">
@@ -66,7 +67,7 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
-                    <a class="btn btn-outline-light login-btn order-3 order-lg-3" href="#">
+                    <a id="openLoginModal" class="btn btn-outline-light login-btn order-3 order-lg-3" href="#">
                         <i class="fa-solid fa-user ms-1"></i>تسجيل الدخول
                     </a>
 
@@ -92,17 +93,17 @@
             <ul class="policy-list">
                 <li>
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
-                    يمكنك أن تولد مثل  إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
+                    يمكنك أن تولد مثل إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
                     كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء .
                 </li>
                 <li>
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
-                    يمكنك أن تولد مثل  إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
+                    يمكنك أن تولد مثل إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
                     كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء .
                 </li>
                 <li>
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
-                    يمكنك أن تولد مثل  إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
+                    يمكنك أن تولد مثل إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات
                     كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء .
                 </li>
             </ul>
@@ -165,6 +166,74 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <!-- Sidebar Cart -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h5>السلة</h5>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body">
+            <div id="cartItems"></div>
+            <div class="cart-footer mt-4">
+                <div class="mb-3">
+                    <label for="discountCode" class="form-label">كود الخصم</label>
+                    <input type="text" id="discountCode" class="form-control" placeholder="ادخل كود الخصم">
+                    <button id="applyDiscount" class="btn btn-success w-100 mt-2">تطبيق الكود</button>
+                </div>
+                <h6>المجموع الكلي: <span id="totalPrice">0.00 ر.س</span></h6>
+                <button class="btn btn-primary w-100 mt-2">إتمام الطلب</button>
+                <button class="btn btn-danger w-100 mt-2" id="clearCart">تفريغ السلة</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notify"></div>
+
+    <!-- Modal لتأكيد تفريغ السلة -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-box">
+            <p class="mb-3">هل أنت متأكد أنك تريد تفريغ السلة؟</p>
+            <div class="d-flex justify-content-between gap-2">
+                <button class="btn btn-danger w-100" id="confirmClear">نعم، تفريغ</button>
+                <button class="btn btn-secondary w-100" id="cancelClear">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال تسجيل الدخول -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box login-modal">
+            <button id="closeLoginModal" class="close-btn">&times;</button>
+            <div class="text-center mb-3">
+                <div class="user-icon mb-2">
+                    <i class="fas fa-user-circle fa-3x"></i>
+                </div>
+                <h5>تسجيل الدخول</h5>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" id="emailInput" class="form-control" placeholder="your@gmail.com" required>
+                </div>
+                <div class="password-wrapper position-relative mb-3">
+                    <label for="passwordInput" class="form-label">كلمة المرور</label>
+                    <input type="password" id="passwordInput" class="form-control" placeholder="123*****" required>
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back To Top -->
+    <button id="backToTopBtn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

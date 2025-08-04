@@ -14,9 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const openLoginModal = document.getElementById("openLoginModal");
   const loginModal = document.getElementById("loginModal");
   const closeLoginModal = document.getElementById("closeLoginModal");
+  const backToTopBtn = document.getElementById("backToTopBtn");
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let discountPercent = parseInt(localStorage.getItem("discount")) || 0;
+
+  // ✅ زر إغلاق الشريط العلوي الأحمر
+  const topBar = document.querySelector(".top-bar");
+  const closeTopBarBtn = document.querySelector(".close-topbar");
+
+  if (topBar && closeTopBarBtn) {
+    closeTopBarBtn.addEventListener("click", () => {
+      topBar.style.transition = "all 0.3s ease";
+      topBar.style.opacity = "0";
+      topBar.style.transform = "translateY(-100%)";
+      setTimeout(() => {
+        topBar.style.display = "none";
+      }, 300);
+    });
+  }
 
   const toast = document.getElementById("toast");
 
@@ -191,4 +207,22 @@ togglePassword.addEventListener("click", () => {
     type === "password"
       ? `<i class="fas fa-eye"></i>`
       : `<i class="fas fa-eye-slash"></i>`;
+});
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+backToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

@@ -23,40 +23,47 @@
 
 <body>
     <!-- Start Top Bar -->
-    <div class="top-bar text-center py-2 fw-bold">
-        تخفيضات موسمية تصل إلى 40% حتى 30 سبتمبر
+    <div class="top-bar position-relative text-center">
+        <span class="topbar-text">تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر</span>
+        <button class="close-topbar" title="إغلاق الشريط">&times;</button>
     </div>
+    <!-- End Top Bar -->
 
-    <!-- Start Header/Nav -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+        <div
+            class="container d-flex flex-lg-row align-items-center justify-content-between flex-column flex-lg-row gap-3">
 
-            <!-- Logo + Cart (Small screens) -->
-            <div class="logo-cart-wrapper d-flex d-lg-none justify-content-between w-100">
-                <a class="navbar-brand" href="/"><img src="./assets/images/logo.png" alt="الشعار" class="logo" /></a>
-                <a class="navbar-brand" href="#"><img src="./assets/images/shopping-bag_outline.png" alt="السلة"
-                        class="cartLogo" /></a>
+            <div class="logo-cart-wrapper d-flex d-lg-none align-items-center justify-content-center"
+                style="gap: 130px;">
+                <a class="navbar-brand mb-0" href="/">
+                    <img src="./assets/images/logo.png" alt="LOGO" class="logo">
+                </a>
+                <a class="navbar-brand mb-0" href="#">
+                    <img src="./assets/images/shopping-bag_outline.png" alt="Cart" class="cartLogo">
+                </a>
             </div>
 
-            <!-- Logo (Large screens) -->
-            <a class="navbar-brand d-none d-lg-block" href="/"><img src="./assets/images/logo.png" alt="الشعار"
-                    class="logo" /></a>
+            <a class="navbar-brand d-none d-lg-block" href="/">
+                <img src="./assets/images/logo.png" alt="LOGO" class="logo">
+            </a>
 
-            <!-- Search -->
-            <form class="search-form position-relative d-flex align-items-center" role="search">
+            <form class="d-flex align-items-center position-relative search-form" role="search">
                 <input class="form-control ps-5" type="search" placeholder="ابحث هنا ..." aria-label="Search" />
-                <i class="fa-solid fa-magnifying-glass search-icon position-absolute"></i>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </form>
 
-            <!-- Cart (Large screens) -->
-            <a class="navbar-brand d-none d-lg-block" href="#"><img src="./assets/images/shopping-bag_outline.png"
-                    alt="السلة" class="cartLogo" /></a>
+            <a class="navbar-brand d-none d-lg-block" href="#">
+                <img src="./assets/images/shopping-bag_outline.png" alt="Cart" class="cartLogo">
+            </a>
+
         </div>
     </nav>
+    <!-- End Search Bar   -->
 
-    <!-- Secondary Navbar -->
+    <!-- Start Nav Bar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
+
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,9 +71,11 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
-                    <a class="btn btn-outline-light login-btn order-3" href="#"><i
-                            class="fa-solid fa-user ms-1"></i>تسجيل الدخول</a>
-                    <ul class="navbar-nav mx-auto order-1 mb-2 mb-lg-0">
+                    <a id="openLoginModal" class="btn btn-outline-light login-btn order-3 order-lg-3" href="#">
+                        <i class="fa-solid fa-user ms-1"></i>تسجيل الدخول
+                    </a>
+
+                    <ul class="navbar-nav mx-auto order-1 order-lg-2 mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="/">الصفحة الرئيسية</a></li>
                         <li class="nav-item"><a class="nav-link" href="/products.html">جميع المنتجات</a></li>
                         <li class="nav-item"><a class="nav-link" href="/terms.html">سياسة الاستخدام</a></li>
@@ -76,6 +85,7 @@
             </div>
         </div>
     </nav>
+    <!-- End Nav Bar -->
 
     <!-- Content -->
     <div class="container my-4">
@@ -158,81 +168,129 @@
 
                     <div class="container d-flex flex-wrap justify-content-center gap-3">
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                         <div class="product-card">
-                            <img src="./assets/images/mask1.png" alt="منتج ماسك" class="product-img" />
+                            <a href="productDetailes.html" style="text-decoration: none;">
+                                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                            </a>
                             <div class="product-details">
                                 <h5 class="product-title">مجموعة العناية اليومية</h5>
-                                <div class="rating"><span>(25)</span><span class="stars">★★★★★</span></div>
+                                <div class="rating">
+                                    <span>(25)</span>
+                                    <span class="stars">★★★★★</span>
+                                </div>
                                 <div class="price">
                                     <span class="current-price">102.00 ر.س</span>
                                     <span class="old-price">132.00 ر.س</span>
                                     <span class="discount">وفر %30</span>
                                 </div>
-                                <button class="add-to-cart"><i class="fa fa-shopping-bag"></i> إضافة للسلة</button>
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    إضافة للسلة
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -296,6 +354,74 @@
                     Al-Faqawi</span></p>
         </div>
     </footer>
+
+    <!-- Sidebar Cart -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h5>السلة</h5>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body">
+            <div id="cartItems"></div>
+            <div class="cart-footer mt-4">
+                <div class="mb-3">
+                    <label for="discountCode" class="form-label">كود الخصم</label>
+                    <input type="text" id="discountCode" class="form-control" placeholder="ادخل كود الخصم">
+                    <button id="applyDiscount" class="btn btn-success w-100 mt-2">تطبيق الكود</button>
+                </div>
+                <h6>المجموع الكلي: <span id="totalPrice">0.00 ر.س</span></h6>
+                <button class="btn btn-primary w-100 mt-2">إتمام الطلب</button>
+                <button class="btn btn-danger w-100 mt-2" id="clearCart">تفريغ السلة</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notify"></div>
+
+    <!-- Modal لتأكيد تفريغ السلة -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-box">
+            <p class="mb-3">هل أنت متأكد أنك تريد تفريغ السلة؟</p>
+            <div class="d-flex justify-content-between gap-2">
+                <button class="btn btn-danger w-100" id="confirmClear">نعم، تفريغ</button>
+                <button class="btn btn-secondary w-100" id="cancelClear">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال تسجيل الدخول -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box login-modal">
+            <button id="closeLoginModal" class="close-btn">&times;</button>
+            <div class="text-center mb-3">
+                <div class="user-icon mb-2">
+                    <i class="fas fa-user-circle fa-3x"></i>
+                </div>
+                <h5>تسجيل الدخول</h5>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" id="emailInput" class="form-control" placeholder="your@gmail.com" required>
+                </div>
+                <div class="password-wrapper position-relative mb-3">
+                    <label for="passwordInput" class="form-label">كلمة المرور</label>
+                    <input type="password" id="passwordInput" class="form-control" placeholder="123*****" required>
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back To Top -->
+    <button id="backToTopBtn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

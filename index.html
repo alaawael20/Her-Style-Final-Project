@@ -18,11 +18,12 @@
 
 <body>
 
-    <!-- Start Top Bar   -->
-    <div class="top-bar">
-        تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر
+    <!-- Start Top Bar -->
+    <div class="top-bar position-relative text-center">
+        <span class="topbar-text">تخفيضات موسمية تصل إلى 40% إلى 30 سبتمبر</span>
+        <button class="close-topbar" title="إغلاق الشريط">&times;</button>
     </div>
-    <!-- End Top Bar   -->
+    <!-- End Top Bar -->
 
     <!-- Start Search Bar   -->
     <nav class="navbar navbar-expand-lg">
@@ -152,8 +153,9 @@
         </div>
         <div class="container d-flex flex-wrap justify-content-center gap-3">
             <div class="product-card">
-                <img src="./assets/images/pro1.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/pro1.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
                     <h5 class="product-title">منتج بروتين باوند</h5>
                     <div class="rating">
@@ -172,8 +174,9 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/pro1.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/pro1.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
                     <h5 class="product-title">منتج بروتين باوند</h5>
                     <div class="rating">
@@ -192,10 +195,11 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/pro2.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/pro2.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
-                    <h5 class="product-title">منتج سيروم وتر</h5>
+                    <h5 class="product-title">منتج بروتين باوند</h5>
                     <div class="rating">
                         <span>(25)</span>
                         <span class="stars">★★★★★</span>
@@ -212,10 +216,11 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/pro2.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/pro2.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
-                    <h5 class="product-title">منتج سيروم وتر</h5>
+                    <h5 class="product-title">منتج بروتين باوند</h5>
                     <div class="rating">
                         <span>(25)</span>
                         <span class="stars">★★★★★</span>
@@ -243,8 +248,9 @@
         </div>
         <div class="container d-flex flex-wrap justify-content-center gap-3">
             <div class="product-card">
-                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
                     <h5 class="product-title">مجموعة العناية اليومية</h5>
                     <div class="rating">
@@ -263,10 +269,11 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/mask.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/mask.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
-                    <h5 class="product-title">منتج ماسك انبول</h5>
+                    <h5 class="product-title">مجموعة العناية اليومية</h5>
                     <div class="rating">
                         <span>(25)</span>
                         <span class="stars">★★★★★</span>
@@ -283,10 +290,11 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/mask.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
-                    <h5 class="product-title">منتج ماسك انبول</h5>
+                    <h5 class="product-title">مجموعة العناية اليومية</h5>
                     <div class="rating">
                         <span>(25)</span>
                         <span class="stars">★★★★★</span>
@@ -303,8 +311,9 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="./assets/images/mask1.png" alt="منتج" class="product-img" />
-
+                <a href="productDetailes.html" style="text-decoration: none;">
+                    <img src="./assets/images/mask.png" alt="منتج" class="product-img" />
+                </a>
                 <div class="product-details">
                     <h5 class="product-title">مجموعة العناية اليومية</h5>
                     <div class="rating">
@@ -460,7 +469,7 @@
     <div id="overlay" class="overlay"></div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="toast-notify">تمت إضافة المنتج إلى السلة ✅</div>
+    <div id="toast" class="toast-notify"></div>
 
     <!-- Modal لتأكيد تفريغ السلة -->
     <div class="modal-overlay" id="confirmModal">
@@ -498,6 +507,11 @@
             </form>
         </div>
     </div>
+
+    <!-- Back To Top -->
+    <button id="backToTopBtn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="./assets/js/main.js"></script>
