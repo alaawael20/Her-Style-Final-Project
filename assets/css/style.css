@@ -968,3 +968,24 @@ input[type="text"]:not(:placeholder-shown) {
   padding-left: 50px;
   text-align: end;
 }
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+  background-image: none;
+}
+
+.navbar-toggler-icon::before {
+  content: "\2630";
+  color: white;
+  font-size: 1.5rem;
+}
+
+.toggler-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}
